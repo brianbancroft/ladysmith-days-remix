@@ -7,11 +7,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
+import Footer from '~/components/Footer'
+import Nav from '~/components/Nav'
 import DefaultErrorBoundary from '~/components/ui/error-boundary'
 import iconsHref from '~/components/ui/icons/sprite.svg?url'
-
-import Nav from '~/components/Nav'
-import Footer from '~/components/Footer'
 
 export const links: LinksFunction = () => [
   { rel: 'prefetch', href: iconsHref, as: 'image' },

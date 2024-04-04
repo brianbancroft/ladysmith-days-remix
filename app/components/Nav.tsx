@@ -24,7 +24,7 @@ function Nav() {
       <div
         id="navLinks-desktop"
         className={classNames(
-          'hidden flex-row justify-evenly bg-blue-700/60 py-2 transition-all duration-300 md:flex',
+          'grid hidden grid-cols-4  gap-x-6 bg-blue-700/60 py-2 capitalize text-white underline transition-all duration-300 md:flex',
           visible ? 'ml-12' : '-ml-[50vw]',
         )}
       >
@@ -66,18 +66,34 @@ function Nav() {
               `}
             >
               <Menu.Item>
-                {({ active }) => (
+                {({ active, close }) => (
                   <div className="flex items-center">
-                    <Link to="/" style={{ color: 'darkblue' }}>
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
+                      to="/"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
                       home
                     </Link>
                   </div>
                 )}
               </Menu.Item>
               <Menu.Item>
-                {({ active }) => (
+                {({ active, close }) => (
                   <div className="flex items-center">
-                    <Link to="/volunteer" style={{ color: 'darkblue' }}>
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
+                      to="/volunteer"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
                       volunteer
                     </Link>
                   </div>
@@ -85,9 +101,17 @@ function Nav() {
               </Menu.Item>
 
               <Menu.Item>
-                {({ active }) => (
+                {({ active, close }) => (
                   <div className="flex items-center">
-                    <Link to="/vendor" style={{ color: 'darkblue' }}>
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
+                      to="/vendor"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
                       vendor
                     </Link>
                   </div>
@@ -95,9 +119,17 @@ function Nav() {
               </Menu.Item>
 
               <Menu.Item>
-                {({ active }) => (
+                {({ active, close }) => (
                   <div className="flex items-center">
-                    <Link to="/sponsor" style={{ color: 'darkblue' }}>
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
+                      to="/sponsor"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
                       sponsor
                     </Link>
                   </div>
