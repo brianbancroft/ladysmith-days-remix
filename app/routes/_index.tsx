@@ -1,5 +1,4 @@
 import type { MetaFunction } from '@remix-run/node'
-import { Link } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
