@@ -1,9 +1,9 @@
 import logo from '~/assets/ladysmith-days-logo.png'
 
 type Props = {
-  slogan: string
-  title: string
-  subtitle: string
+  slogan?: string
+  title?: string
+  subtitle?: string
   imageClass?: string
 }
 
