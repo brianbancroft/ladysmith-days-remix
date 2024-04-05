@@ -1,4 +1,7 @@
+import { useEffect } from 'react'
+import { toast } from 'react-toastify'
 import type { MetaFunction } from '@remix-run/node'
+import { useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
@@ -15,6 +18,14 @@ export const meta: MetaFunction = () => {
 }
 
 export default function Index() {
+  const location = useLocation()
+  useEffect(() => {
+    const params = new URLSearchParams(location.search)
+    if (params.get('sent') === 'true') {
+      toast('Thank you! Your email was sent. We will get back to you soon.')
+    }
+  }, [location.search])
+
   return (
     <main className="w-full">
       <section className="" id="hero">

@@ -1,4 +1,5 @@
 import type { ActionFunctionArgs } from '@remix-run/node'
+import { redirect } from '@remix-run/node'
 import { Form } from '@remix-run/react'
 import PageJumbotron from '~/components/PageJumbotron'
 import { sendEmail } from '~/server/sendEmail.server'
@@ -11,9 +12,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
   await sendEmail({ name, email, message, page: 'Volunteer Page' })
 
-  return {
-    props: {},
-  }
+  return redirect('/?sent=true')
 }
 
 const VolunteerSponsors = () => (

@@ -1,4 +1,4 @@
-import { type ActionFunctionArgs } from '@remix-run/node'
+import { type ActionFunctionArgs, redirect } from '@remix-run/node'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import LinkVendorDownload from '~/components/LinkVendorDownload'
 import PageJumbotron from '~/components/PageJumbotron'
@@ -15,9 +15,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
   await sendEmail({ name, email, message, page: 'Vendor' })
 
-  return {
-    props: {},
-  }
+  return redirect('/?sent=true')
 }
 
 export default function Vendor() {

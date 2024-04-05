@@ -1,5 +1,11 @@
 import './tailwind.css'
-import { type ActionFunctionArgs, type LinksFunction } from '@remix-run/node'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+import {
+  type ActionFunctionArgs,
+  type LinksFunction,
+  redirect,
+} from '@remix-run/node'
 import {
   Links,
   Meta,
@@ -25,9 +31,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
   await sendEmail({ name, email, message, page: 'Homepage' })
 
-  return {
-    props: {},
-  }
+  return redirect('/?sent=true')
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -41,6 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body suppressHydrationWarning>
         <Nav />
+        <ToastContainer />
         {children}
         <Footer />
         <ScrollRestoration />
