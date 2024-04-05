@@ -8,6 +8,7 @@ function TimerClock() {
     minutes: 0,
     seconds: 0,
   })
+  const [loading, setLoading] = useState(true)
 
   //   calculate initial time, and create a function that will update the time remaining every second
   useEffect(() => {
@@ -25,6 +26,7 @@ function TimerClock() {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
       setTimeRemaining({ days, hours, minutes, seconds })
+      setLoading(false)
     })
   }, [])
 
@@ -34,26 +36,34 @@ function TimerClock() {
     timeRemaining.minutes +
     timeRemaining.seconds
 
+  function InternalContent() {
+    if (loading) {
+      return <></>
+    }
+
+    return timeAvailable <= 0 ? (
+      <div className="flex flex-col items-center justify-center bg-blue-600 p-4 uppercase text-white ">
+        <h1 className="neon-text text-3xl font-thin tracking-widest">
+          Ladysmith Days is Here
+        </h1>
+      </div>
+    ) : (
+      <div className="mx-auto grid grid-cols-4 grid-rows-2 justify-items-center gap-x-4 font-bold uppercase text-white">
+        <div className="">{timeRemaining.days}</div>
+        <div className="row-start-2">days</div>
+        <div>{timeRemaining.hours}</div>
+        <div className="row-start-2">hours</div>
+        <div>{timeRemaining.minutes}</div>
+        <div className="row-start-2">minutes</div>
+        <div>{timeRemaining.seconds}</div>
+        <div className="row-start-2">seconds</div>
+      </div>
+    )
+  }
+
   return (
-    <aside className="bg-slate-700/80 p-4">
-      {timeAvailable <= 0 ? (
-        <div className="flex flex-col items-center justify-center bg-blue-600 p-4 uppercase text-white ">
-          <h1 className="neon-text text-3xl font-thin tracking-widest">
-            Ladysmith Days is Here
-          </h1>
-        </div>
-      ) : (
-        <div className="mx-auto grid grid-cols-4 grid-rows-2 justify-items-center gap-x-4 font-bold uppercase text-white">
-          <div className="">{timeRemaining.days}</div>
-          <div className="row-start-2">days</div>
-          <div>{timeRemaining.hours}</div>
-          <div className="row-start-2">hours</div>
-          <div>{timeRemaining.minutes}</div>
-          <div className="row-start-2">minutes</div>
-          <div>{timeRemaining.seconds}</div>
-          <div className="row-start-2">seconds</div>
-        </div>
-      )}
+    <aside className="h-[80px] w-[392px] bg-slate-700/80 p-4">
+      <InternalContent />
     </aside>
   )
 }
