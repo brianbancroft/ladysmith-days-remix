@@ -62,7 +62,7 @@ function TimerClock() {
   }
 
   return (
-    <aside className="h-[80px] w-[392px] bg-slate-700/80 p-4">
+    <aside className="h-[80px] w-[392px] rounded bg-slate-700/80 p-4 ">
       <InternalContent />
     </aside>
   )
