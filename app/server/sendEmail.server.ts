@@ -10,13 +10,15 @@ type EmailOptions = {
   position?: string
 }
 
-async function sendEmail({
+export async function sendEmail({
   name,
   email,
   message,
   page,
   position,
 }: EmailOptions) {
+  console.log('Attempting to send email ', name, email, message, page, position)
+
   let internalEmail = `
         <h4>Original Message from ${name}</h4>
         <blockquote>${message}</blockquote>
@@ -26,10 +28,10 @@ async function sendEmail({
 
       `
 
-  let internalSubject = `Ladysmith Days - Website Inquiry: from ${name} at ${page}`
+  let internalSubject = `[website]: from ${name} at ${page}`
 
   if (page === 'Volunteer Page' && position) {
-    internalSubject = `Ladysmith Days - Prospective Volunteer: ${name}`
+    internalSubject = `[website] Volunteer: ${name}`
 
     internalEmail = `
         <h4>Original Message from ${name}, who wishes to be a ${position}:</h4>
@@ -41,8 +43,10 @@ async function sendEmail({
 
   try {
     resend.emails.send({
-      to: 'event@ladysmithdays.com', // Your email where you'll receive emails
-      from: 'event@ladysmithdays.com', // your website email address here
+      // to: 'event@ladysmithdays.com', // Your email where you'll receive emails
+      // from: 'event@ladysmithdays.com', // your website email address here
+      to: 'bancroft.bw@gmail.com', // Your email where you'll receive emails
+      from: 'event@ladysmithdays.com',
       subject: internalSubject,
       reply_to: email,
       html: internalEmail,
@@ -55,5 +59,3 @@ async function sendEmail({
     throw new Error('There was an error sending the email')
   }
 }
-
-export default sendEmail

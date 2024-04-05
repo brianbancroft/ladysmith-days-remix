@@ -1,5 +1,5 @@
 import './tailwind.css'
-import { type ActionFunctionArgs,type LinksFunction } from '@remix-run/node'
+import { type ActionFunctionArgs, type LinksFunction } from '@remix-run/node'
 import {
   Links,
   Meta,
@@ -11,6 +11,7 @@ import Footer from '~/components/Footer'
 import Nav from '~/components/Nav'
 import DefaultErrorBoundary from '~/components/ui/error-boundary'
 import iconsHref from '~/components/ui/icons/sprite.svg?url'
+import { sendEmail } from './server/sendEmail.server'
 
 export const links: LinksFunction = () => [
   { rel: 'prefetch', href: iconsHref, as: 'image' },
@@ -18,11 +19,11 @@ export const links: LinksFunction = () => [
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = new URLSearchParams(await request.text())
-  const name = formData.get('name')
-  const email = formData.get('email')
-  const message = formData.get('message')
+  const name = String(formData.get('name'))
+  const email = String(formData.get('email'))
+  const message = String(formData.get('message'))
 
-  console.log('Name ', name)
+  await sendEmail({ name, email, message, page: '' })
 
   return {
     props: {},
