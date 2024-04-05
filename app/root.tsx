@@ -1,5 +1,5 @@
 import './tailwind.css'
-import { type LinksFunction } from '@remix-run/node'
+import { type ActionFunctionArgs,type LinksFunction } from '@remix-run/node'
 import {
   Links,
   Meta,
@@ -15,6 +15,19 @@ import iconsHref from '~/components/ui/icons/sprite.svg?url'
 export const links: LinksFunction = () => [
   { rel: 'prefetch', href: iconsHref, as: 'image' },
 ]
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = new URLSearchParams(await request.text())
+  const name = formData.get('name')
+  const email = formData.get('email')
+  const message = formData.get('message')
+
+  console.log('Name ', name)
+
+  return {
+    props: {},
+  }
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,19 +1,21 @@
+import { Form } from '@remix-run/react'
+
 type FormProps = {
   title?: string
   description: string
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  route: string
 }
 
 const FormContactGeneral = ({
   title = 'Contact Us',
   description,
-  handleSubmit,
+  route,
 }: FormProps) => {
   return (
     <div className="max-w-prose">
       <h1 className="font-heading my-2 ml-2 text-4xl font-semibold">{title}</h1>
       <p className="ml-2">{description}</p>
-      <form className="mt-3 flex flex-col" onSubmit={handleSubmit}>
+      <Form className="mt-3 flex flex-col" action={route} method="post">
         <input
           required
           type="text"
@@ -41,7 +43,7 @@ const FormContactGeneral = ({
         >
           Submit
         </button>
-      </form>
+      </Form>
     </div>
   )
 }
