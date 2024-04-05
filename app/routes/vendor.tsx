@@ -1,4 +1,5 @@
 import { type ActionFunctionArgs, redirect } from '@remix-run/node'
+import type { MetaFunction } from '@remix-run/react'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import LinkVendorDownload from '~/components/LinkVendorDownload'
 import PageJumbotron from '~/components/PageJumbotron'
@@ -6,6 +7,17 @@ import { sendEmail } from '~/server/sendEmail.server'
 
 const merchandiseVendorsAvailable = true
 const foodVendorsAvailable = false
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Sell with Ladysmith Days' },
+    {
+      name: 'description',
+      content:
+        'Everything you need to know to handle a booth at Ladysmith Days',
+    },
+  ]
+}
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = new URLSearchParams(await request.text())

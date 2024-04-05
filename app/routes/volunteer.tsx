@@ -1,8 +1,17 @@
-import type { ActionFunctionArgs } from '@remix-run/node'
-import { redirect } from '@remix-run/node'
-import { Form } from '@remix-run/react'
+import { type ActionFunctionArgs, redirect } from '@remix-run/node'
+import { Form, type MetaFunction } from '@remix-run/react'
 import PageJumbotron from '~/components/PageJumbotron'
 import { sendEmail } from '~/server/sendEmail.server'
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Volunteer with Ladysmith Days' },
+    {
+      name: 'description',
+      content: 'Ladysmith Days is a great way to get to know Ladysmith!',
+    },
+  ]
+}
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = new URLSearchParams(await request.text())

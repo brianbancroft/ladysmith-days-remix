@@ -45,8 +45,9 @@ export async function sendEmail({
     resend.emails.send({
       // to: 'event@ladysmithdays.com', // Your email where you'll receive emails
       // from: 'event@ladysmithdays.com', // your website email address here
-      to: 'bancroft.bw@gmail.com', // Your email where you'll receive emails
+      to: 'event@ladysmithdays.com', // Your email where you'll receive emails
       from: 'event@ladysmithdays.com',
+      cc: 'contactladysmithdays@gmail.com',
       subject: internalSubject,
       reply_to: email,
       html: internalEmail,

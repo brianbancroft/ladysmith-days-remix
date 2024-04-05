@@ -1,8 +1,19 @@
 import { type ActionFunctionArgs, redirect } from '@remix-run/node'
+import { type MetaFunction } from '@remix-run/react'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import PageJumbotron from '~/components/PageJumbotron'
 import SectionSponsorList from '~/components/SectionSponsorList'
 import { sendEmail } from '~/server/sendEmail.server'
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Sponsor Ladysmith Days' },
+    {
+      name: 'description',
+      content: 'Help make Ladysmith Days a weekend to celebrate!',
+    },
+  ]
+}
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = new URLSearchParams(await request.text())
