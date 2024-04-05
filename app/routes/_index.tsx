@@ -21,10 +21,10 @@ export default function Index() {
         <div
           id="introduction"
           className="
-              bg-header-homepage
-              flex h-screen
-              flex-col
-              justify-center bg-gray-500 bg-cover
+              flex
+              h-screen flex-col
+              justify-center
+              bg-gray-500 bg-header-homepage bg-cover
               bg-no-repeat
             "
           style={{ backgroundPosition: '0 25%' }}
@@ -49,11 +49,11 @@ export default function Index() {
               height={300}
               width={350}
             />
-            <h2 className="font-heading fade-in relative right-4 my-12 justify-center rounded-r-xl bg-white p-2 pl-8 text-5xl font-black text-blue-600 md:right-0 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
+            <h2 className="fade-in relative right-4 my-12 justify-center rounded-r-xl bg-white p-2 pl-8 font-heading text-5xl font-black text-blue-600 md:right-0 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
               Celebrate Ladysmith
             </h2>
             <TimerClock />
-            <h3 className="font-heading fade-in-delay my-4 mt-12 text-xl font-light italic opacity-0">
+            <h3 className="fade-in-delay my-4 mt-12 font-heading text-xl font-light italic opacity-0">
               august long weekend
             </h3>
           </div>
@@ -89,7 +89,7 @@ export default function Index() {
           rel="noopener noreferrer"
           className="bg-gray-300 p-2 transition-all duration-500 hover:bg-gray-200"
         >
-          <div className="bg-sponsor-homepage-1 my-1 flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+          <div className="my-1 flex h-full w-full justify-center bg-sponsor-homepage-1 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
         </a>
 
         <a
@@ -98,7 +98,7 @@ export default function Index() {
           rel="noopener noreferrer"
           className="bg-gray-300 p-4 transition-all duration-500 hover:bg-gray-200"
         >
-          <div className="bg-sponsor-homepage-3 my-1  flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+          <div className="my-1 flex  h-full w-full justify-center bg-sponsor-homepage-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
         </a>
       </div>
 

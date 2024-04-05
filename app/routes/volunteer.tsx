@@ -1,4 +1,20 @@
+import type { ActionFunctionArgs } from '@remix-run/node'
+import { Form } from '@remix-run/react'
 import PageJumbotron from '~/components/PageJumbotron'
+import { sendEmail } from '~/server/sendEmail.server'
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = new URLSearchParams(await request.text())
+  const name = String(formData.get('name'))
+  const email = String(formData.get('email'))
+  const message = String(formData.get('message'))
+
+  await sendEmail({ name, email, message, page: 'Volunteer Page' })
+
+  return {
+    props: {},
+  }
+}
 
 const VolunteerSponsors = () => (
   <section id="sponsors" className="my-3">
@@ -10,7 +26,7 @@ const VolunteerSponsors = () => (
         rel="noopener noreferrer"
         className="sponsor-element sponsor-link p-2"
       >
-        <div className="bg-sponsor-volunteer-1 my-1 flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+        <div className="my-1 flex h-full w-full justify-center bg-sponsor-volunteer-1 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
       </a>
 
       <a
@@ -19,7 +35,7 @@ const VolunteerSponsors = () => (
         rel="noopener noreferrer"
         className="sponsor-element sponsor-link  p-2 px-4"
       >
-        <div className="bg-sponsor-volunteer-2 my-1  flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+        <div className="my-1 flex  h-full w-full justify-center bg-sponsor-volunteer-2 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
       </a>
       <a
         href="https://www.saveonfoods.com/ladysmith/"
@@ -27,7 +43,7 @@ const VolunteerSponsors = () => (
         rel="noopener noreferrer"
         className=" sponsor-element sponsor-link p-4"
       >
-        <div className="bg-sponsor-volunteer-3 my-1  flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+        <div className="my-1 flex  h-full w-full justify-center bg-sponsor-volunteer-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
       </a>
     </div>
   </section>
@@ -70,7 +86,7 @@ function Volunteer() {
       >
         {' '}
         <div className="max-w-prose rounded border border-blue-600 bg-white p-3">
-          <h1 className="font-heading my-2 ml-2 font-sans text-2xl font-semibold">
+          <h1 className="font-sans my-2 ml-2 font-heading text-2xl font-semibold">
             Want to help? Reach out
           </h1>
           <p className="ml-2 py-2">
@@ -85,7 +101,11 @@ function Volunteer() {
             to us. Let us know a little about you and we will bring you into our
             next meeting, or at the event.
           </p>
-          <form className="mt-3 flex flex-col" onSubmit={() => {}}>
+          <Form
+            action="/volunteer"
+            method="post"
+            className="mt-3 flex flex-col"
+          >
             <input
               required
               type="text"
@@ -113,7 +133,7 @@ function Volunteer() {
             >
               Submit
             </button>
-          </form>
+          </Form>
         </div>
       </section>
       <VolunteerSponsors />

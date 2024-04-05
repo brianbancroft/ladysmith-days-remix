@@ -1,6 +1,21 @@
+import type { ActionFunctionArgs } from '@remix-run/node'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import PageJumbotron from '~/components/PageJumbotron'
 import SectionSponsorList from '~/components/SectionSponsorList'
+import { sendEmail } from '~/server/sendEmail.server'
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = new URLSearchParams(await request.text())
+  const name = String(formData.get('name'))
+  const email = String(formData.get('email'))
+  const message = String(formData.get('message'))
+
+  await sendEmail({ name, email, message, page: 'Sponsor' })
+
+  return {
+    props: {},
+  }
+}
 
 function SponsorPage() {
   return (
@@ -69,7 +84,7 @@ function SponsorPage() {
       >
         <FormContactGeneral
           description="Talk to us to see how Ladysmith Days can be a way to help your organization or business give back to the town"
-          handleSubmit={() => {}}
+          route="/sponsor"
         />
       </section>
     </main>

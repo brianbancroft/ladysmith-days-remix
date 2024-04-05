@@ -1,9 +1,24 @@
+import { type ActionFunctionArgs } from '@remix-run/node'
 import FormContactGeneral from '~/components/FormContactGeneral'
 import LinkVendorDownload from '~/components/LinkVendorDownload'
 import PageJumbotron from '~/components/PageJumbotron'
+import { sendEmail } from '~/server/sendEmail.server'
 
 const merchandiseVendorsAvailable = true
 const foodVendorsAvailable = false
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = new URLSearchParams(await request.text())
+  const name = String(formData.get('name'))
+  const email = String(formData.get('email'))
+  const message = String(formData.get('message'))
+
+  await sendEmail({ name, email, message, page: 'Vendor' })
+
+  return {
+    props: {},
+  }
+}
 
 export default function Vendor() {
   return (
@@ -25,7 +40,7 @@ export default function Vendor() {
               rel="noopener noreferrer"
               className="bg-gray-300 p-2 transition-all duration-500 hover:bg-gray-200"
             >
-              <div className="bg-sponsor-vendor-1 my-1 flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+              <div className="my-1 flex h-full w-full justify-center bg-sponsor-vendor-1 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
             </a>
 
             <a
@@ -34,7 +49,7 @@ export default function Vendor() {
               rel="noopener noreferrer"
               className="bg-gray-300 p-2  px-4 transition-all duration-500 hover:bg-gray-200"
             >
-              <div className="bg-sponsor-vendor-2 my-1  flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+              <div className="my-1 flex  h-full w-full justify-center bg-sponsor-vendor-2 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
             </a>
             <a
               href="https://www.homehardware.ca/en/store/51441"
@@ -42,7 +57,7 @@ export default function Vendor() {
               rel="noopener noreferrer"
               className=" bg-gray-300 p-4 transition-all duration-500 hover:bg-gray-200"
             >
-              <div className="bg-sponsor-vendor-3 my-1  flex h-full w-full justify-center bg-contain bg-center bg-no-repeat px-12 py-6"></div>
+              <div className="my-1 flex  h-full w-full justify-center bg-sponsor-vendor-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
             </a>
           </div>
         </section>
@@ -105,7 +120,7 @@ export default function Vendor() {
             description="Some processes can be intimidating, and there might be a chance you're missing
                 something, or there might be a chance we could explain something a bit better. If you have
                 questions, talk to us. We'd love to help"
-            handleSubmit={() => {}}
+            route="/vendor"
           />
         </section>
       </main>

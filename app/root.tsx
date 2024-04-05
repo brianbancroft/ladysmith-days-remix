@@ -23,7 +23,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const email = String(formData.get('email'))
   const message = String(formData.get('message'))
 
-  await sendEmail({ name, email, message, page: '' })
+  await sendEmail({ name, email, message, page: 'Homepage' })
 
   return {
     props: {},
