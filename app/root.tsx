@@ -1,9 +1,12 @@
 import './tailwind.css'
 import 'react-toastify/dist/ReactToastify.css'
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import { ToastContainer } from 'react-toastify'
 import {
   type ActionFunctionArgs,
+  json,
   type LinksFunction,
+  type LoaderFunction,
   redirect,
 } from '@remix-run/node'
 import {
@@ -12,16 +15,28 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from '@remix-run/react'
 import Footer from '~/components/Footer'
 import Nav from '~/components/Nav'
 import DefaultErrorBoundary from '~/components/ui/error-boundary'
 import iconsHref from '~/components/ui/icons/sprite.svg?url'
+import { getRecaptchaScore } from '~/utils/getRecaptchaScore'
 import { sendEmail } from './server/sendEmail.server'
 
 export const links: LinksFunction = () => [
   { rel: 'prefetch', href: iconsHref, as: 'image' },
 ]
+
+export const loader: LoaderFunction = async () => {
+  const environment = process.env.RECAPTCHA_SITE_KEY
+
+  return json({
+    ENV: {
+      RECAPTCHA_SITE_KEY: environment,
+    },
+  })
+}
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = new URLSearchParams(await request.text())
@@ -29,12 +44,25 @@ export async function action({ request }: ActionFunctionArgs) {
   const email = String(formData.get('email'))
   const message = String(formData.get('message'))
 
-  await sendEmail({ name, email, message, page: 'Homepage' })
+  const token = formData.get('_captcha') as string
+  const key = process.env.RECAPTCHA_SECRET_KEY as string
 
-  return redirect('/?sent=true')
+  const recaptchaResult = await getRecaptchaScore(token, key)
+
+  if (!recaptchaResult) {
+    // your contact form submission code here
+
+    await sendEmail({ name, email, message, page: 'Homepage' })
+
+    return redirect('/?sent=true')
+  }
+
+  return json({ message: 'You are a robot!' })
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const { ENV } = useLoaderData<typeof loader>()
+
   return (
     <html lang="en">
       <head>
@@ -47,7 +75,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body suppressHydrationWarning>
         <Nav />
         <ToastContainer />
-        {children}
+        <GoogleReCaptchaProvider
+          reCaptchaKey={ENV.RECAPTCHA_SITE_KEY}
+          scriptProps={{
+            async: false,
+            defer: true,
+            appendTo: 'head',
+            nonce: undefined,
+          }}
+        >
+          {children}
+        </GoogleReCaptchaProvider>
         <Footer />
         <ScrollRestoration />
         <Scripts />

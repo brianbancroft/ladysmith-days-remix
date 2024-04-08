@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { toast } from 'react-toastify'
 import type { MetaFunction } from '@remix-run/node'
 import { useLocation } from '@remix-run/react'
@@ -19,6 +20,23 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const location = useLocation()
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const { executeRecaptcha } = useGoogleReCaptcha()
+
+  const handleReCaptchaVerify = useCallback(async () => {
+    if (!executeRecaptcha) {
+      return
+    }
+
+    const token = await executeRecaptcha('yourAction')
+    setCaptchaToken(token)
+  }, [executeRecaptcha])
+
+  // useEffect that will execute out token setting callback function
+  useEffect(() => {
+    handleReCaptchaVerify()
+  }, [handleReCaptchaVerify])
+
   useEffect(() => {
     const params = new URLSearchParams(location.search)
     if (params.get('sent') === 'true') {

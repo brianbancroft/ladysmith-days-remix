@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { renderToPipeableStream } from 'react-dom/server'
 import { PassThrough } from 'node:stream'
 import {
