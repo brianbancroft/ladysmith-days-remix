@@ -47,6 +47,8 @@ export async function action({ request }: ActionFunctionArgs) {
   const token = formData.get('_captcha') as string
   const key = process.env.RECAPTCHA_SECRET_KEY as string
 
+  console.log('Key ', key)
+
   const recaptchaResult = await getRecaptchaScore(token, key)
 
   if (!recaptchaResult) {
