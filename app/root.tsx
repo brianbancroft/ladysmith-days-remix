@@ -63,6 +63,10 @@ export async function action({ request }: ActionFunctionArgs) {
 export function Layout({ children }: { children: React.ReactNode }) {
   const { ENV } = useLoaderData<typeof loader>()
 
+  if (!ENV) {
+    throw new Error('Environment variables are missing')
+  }
+
   return (
     <html lang="en">
       <head>
