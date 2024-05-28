@@ -130,16 +130,6 @@ export default function Index() {
           <div className="my-1 flex  h-full w-full justify-center bg-sponsor-homepage-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
         </a>
       </div>
-
-      <section
-        id="contact-us"
-        className="flex items-center justify-center bg-cyan-300 px-4 py-7 text-blue-700 shadow-2xl drop-shadow-2xl"
-      >
-        <FormContactGeneral
-          route="/"
-          description="If you have any questions about the event, the best ways to get a hold of us are either through this contact form, or through Facebook"
-        />
-      </section>
     </main>
   )
 }
