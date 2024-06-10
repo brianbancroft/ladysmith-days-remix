@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// a visual timer countdown clock that counts down to 4:30pm august 4 2023
+// a visual timer countdown clock that counts down to 4:30pm august 4 2024
 function TimerClock() {
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,

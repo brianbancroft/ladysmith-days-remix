@@ -10,7 +10,7 @@ function SectionOurPlan() {
         <h2 className="my-3 text-3xl font-semibold">Our Plan</h2>
         <p className="my-3 text-lg lg:text-xl">
           The Ladysmith Celebration Society is planning all facets of our event.
-          For 2023. This year we are planning for a two-day event at Transfer
+          For 2024. This year we are planning for a two-day event at Transfer
           Beach along with a Soap Box Derby in Downtown Ladysmith.
         </p>
         <p className="italic">
@@ -26,7 +26,7 @@ function SectionOurPlan() {
         <Link to="/volunteer/">
           <div
             className="text-
-                  lg bg-call-homepage-volunteer group group h-36 bg-cover bg-no-repeat transition-all duration-500  
+                  lg group group h-36 bg-call-homepage-volunteer bg-cover bg-no-repeat transition-all duration-500  
                     hover:bg-center"
           >
             <div
@@ -52,13 +52,13 @@ function SectionOurPlan() {
           <Link to="/sponsor/">
             <div
               className="
-                    bg-call-homepage-sponsor
                     group
                     mt-2
                     flex
                     h-36
-                    flex-col justify-end
-                    bg-gray-200
+                    flex-col
+                    justify-end bg-gray-200
+                    bg-call-homepage-sponsor
                     bg-cover
                     bg-top
                     text-lg
@@ -91,13 +91,13 @@ function SectionOurPlan() {
             <div
               className="
               pointer
-                    bg-call-homepage-vendor
                     mt-2
                     flex
                     h-36
-                    cursor-pointer flex-col
-                    justify-end
-                    bg-gray-300 bg-cover
+                    cursor-pointer
+                    flex-col justify-end
+                    bg-gray-300
+                    bg-call-homepage-vendor bg-cover
                     bg-center
                     text-lg
                     duration-1000
