@@ -90,10 +90,10 @@ function Volunteer() {
       </div>
       <section
         id="contact-us"
-        className="bg-pattern-folds my-6 mt-4 flex items-center justify-center rounded  border-2 p-7 text-blue-600 shadow-2xl  drop-shadow-2xl md:mt-6"
+        className="bg-pattern-folds my-6 mt-4 flex items-center justify-center rounded  border-2 p-2 text-blue-600 shadow-2xl drop-shadow-2xl  md:mt-6 md:p-7"
       >
         {' '}
-        <div className="max-w-prose rounded border border-blue-600 bg-white p-3">
+        <div className="max-w-prose rounded border border-blue-600 bg-white px-1 py-3 md:p-3">
           <h1 className="font-sans my-2 ml-2 font-heading text-2xl font-semibold">
             Want to help? Reach out
           </h1>
