@@ -100,48 +100,19 @@ function Volunteer() {
           <p className="ml-2 py-2">
             Ladysmith Days is a casual organization. Our volunteers are
             dedicated to putting on a fun, free weekend for familes across
-            Ladysmith. We differ from other events in that our volunteer
-            positions are not set. There is a place here for you if you want to
-            help.
+            Ladysmith and we believe everyone has a gift to help celebrate
+            Ladysmith.
           </p>
           <p className="ml-2">
-            To get started <em>the easiest way to begin is right here</em>. Talk
-            to us. Let us know a little about you and we will bring you into our
-            next meeting, or at the event.
+            If you want to volunteer for this year's event, joining us as as
+            easy as filling out the form below:
           </p>
-          <Form
-            action="/volunteer"
-            method="post"
-            className="mt-3 flex flex-col"
-          >
-            <input
-              required
-              type="text"
-              name="name"
-              placeholder="Name"
-              className="m-2 border border-blue-600 p-2"
-            />
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Email"
-              className="m-2 border border-blue-600 p-2"
-            />
-            <textarea
-              required
-              name="message"
-              placeholder="Tell us what you think..."
-              className="m-2 border border-blue-600 p-2"
-            ></textarea>
-            <button
-              type="submit"
-              value="submit"
-              className="m-2 bg-blue-800 p-2 font-semibold text-white"
-            >
-              Submit
-            </button>
-          </Form>
+          <iframe
+            title="Volunteer Form"
+            className="mt-6 h-[50vh] w-full"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdr29LJ8XJE6nfxxMOSlJgVS6U27cEKYfjfnNIlx_MbNYP7rw/viewform?embedded=true"
+            frameBorder="0"
+          />
         </div>
       </section>
       <VolunteerSponsors />
