@@ -118,7 +118,7 @@ const CitizenOfTheYearPage = () => {
               title="Nominate the next Citizen of the Year"
               description="If there is a volunteer you believe has been contributing to the
                 community outside their place of work, this is their chance to
-                be recognized. Give us a few words about this excellent citizen, and we will get in touch with you. Nominations are accepted until June 15 of each
+                be recognized. Give us a few words about this excellent citizen, and we will get in touch with you. Nominations are accepted until the 1st of July of each
                 year."
               route="/citizen-of-the-year"
             />
