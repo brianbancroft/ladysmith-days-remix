@@ -121,7 +121,7 @@ const CitizenOfTheYearPage = () => {
                 be recognized. Give us a few words about this excellent citizen, and we will get in touch with you. Nominations are accepted until the 1st of July of each
                 year."
               route="/citizen-of-the-year"
-              placeholder="In a few sentences, tell us why this person should be the next Citizen of the Year."
+              placeholder="In a few sentences, tell us why your nominee would make an excellent Citizen of the Year."
             />
           </section>
         )}
