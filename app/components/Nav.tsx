@@ -101,6 +101,23 @@ function Nav() {
                         setVisible(false)
                         close()
                       }}
+                      to="/citizen-of-the-year"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
+                      citizen of the year
+                    </Link>
+                  </div>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active, close }) => (
+                  <div className="flex items-center">
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
                       to="/volunteer"
                       style={{ color: 'darkblue' }}
                       className="p-3 text-2xl"
