@@ -2,15 +2,14 @@ import { useCallback, useEffect, useState } from 'react'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { toast } from 'react-toastify'
 import type { MetaFunction } from '@remix-run/node'
-import { useLocation } from '@remix-run/react'
+import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
-import FormContactGeneral from '~/components/FormContactGeneral'
+import { HomepageSponsors } from '~/components/HomepageSponsors'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
 import SectionEventSummary from '~/components/SectionEventSummary'
 import SectionOurPlan from '~/components/SectionOurPlan'
 import SectionSocialContact from '~/components/SectionSocialContact'
 import TimerClock from '~/components/TimerClock'
-
 export const meta: MetaFunction = () => {
   return [
     { title: 'Ladysmith Days' },
@@ -46,7 +45,7 @@ export default function Index() {
 
   return (
     <main className="w-full">
-      <section className="" id="hero">
+      <section className="bg-blue-700  pb-6" id="hero">
         <div
           id="introduction"
           className="
@@ -63,8 +62,8 @@ export default function Index() {
             className="
             flex h-full
             flex-col
-            items-center bg-blue-700
-            bg-opacity-60
+            items-center
+            bg-blue-700 bg-opacity-50
             p-4
             pt-12
             align-middle
@@ -97,11 +96,24 @@ export default function Index() {
         </div>
 
         <SectionEventSummary />
+        <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
+          <Link
+            to="/volunteer"
+            className="btn btn-primary text-3xl text-lime-300"
+          >
+            Volunteer
+          </Link>
+          <Link
+            to="/sponsor"
+            className="btn btn-primary text-3xl text-lime-300"
+          >
+            Sponsor
+          </Link>
+        </nav>
+        <HomepageSponsors />
       </section>
 
       <div className="container mx-auto">
-        {/* <SponsorsHomepage /> */}
-
         {/* Three variants:x
               1. The plan (early times)
               2. The schedule. (as soon as the schedule is available)
