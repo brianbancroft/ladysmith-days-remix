@@ -54,9 +54,8 @@ export default function Index() {
               flex h-screen
               flex-col
               justify-center bg-gray-500 bg-cover
-              bg-center
-              bg-no-repeat
-              md:bg-header-homepage
+              bg-center bg-no-repeat
+              bg-origin-padding md:bg-header-homepage
             "
           style={{ backgroundPosition: '0 25%' }}
         >
@@ -75,7 +74,11 @@ export default function Index() {
           >
             <img
               src={logo}
-              className="my-12"
+              className="
+                fade-in 
+                my-12 
+                delay-1000
+              "
               alt="ladysmith days logo"
               height={300}
               width={350}
