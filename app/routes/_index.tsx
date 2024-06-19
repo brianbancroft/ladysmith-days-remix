@@ -50,11 +50,13 @@ export default function Index() {
         <div
           id="introduction"
           className="
-              flex
-              h-screen flex-col
-              justify-center
-              bg-gray-500 bg-header-homepage bg-cover
+              bg-header-homepage-mobile
+              flex h-screen
+              flex-col
+              justify-center bg-gray-500 bg-cover
+              bg-center
               bg-no-repeat
+              md:bg-header-homepage
             "
           style={{ backgroundPosition: '0 25%' }}
         >

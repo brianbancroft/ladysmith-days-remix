@@ -33,7 +33,9 @@ export default {
         'call-vendor-general': "url('/backgrounds/link-vendor-merch.png')",
         'call-vendor-foodvendor': "url('/backgrounds/link-vendor-food.png')",
         'header-coty': "url('/backgrounds/header-coty.png')",
-        'header-homepage': "url('/backgrounds/header-homepage.png')",
+        'header-homepage': "url('/backgrounds/header-homepage-fireworks.jpg')",
+        'header-homepage-mobile':
+          "url('/backgrounds/header-homepage-fireworks-mobile.jpg')",
         'header-sponsor': "url('/backgrounds/header-sponsor.jpg')",
         'header-vendor': "url('/backgrounds/header-vendor.png')",
         'header-volunteer': "url('/backgrounds/header-volunteer.png')",
