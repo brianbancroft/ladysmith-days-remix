@@ -41,7 +41,7 @@ const CitizenOfTheYearPage = () => {
       <main className="container mx-auto pt-12">
         <PageJumbotron
           imageClass="bg-header-coty"
-          title="The award"
+          title="Celebrate those who make our town the best"
           subtitle="The Citizen of the Year Award is presented for outstanding Community Service over a period of time. The service must be voluntary and does not include service where there has been a connection to normal employment. Businesses, organizations and service groups are welcome to nominate individuals in recognition of their volunteer service."
           slogan="Citizen of the year"
         />
@@ -121,6 +121,7 @@ const CitizenOfTheYearPage = () => {
                 be recognized. Give us a few words about this excellent citizen, and we will get in touch with you. Nominations are accepted until the 1st of July of each
                 year."
               route="/citizen-of-the-year"
+              placeholder="In a few sentences, tell us why this person should be the next Citizen of the Year."
             />
           </section>
         )}

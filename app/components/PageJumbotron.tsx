@@ -49,13 +49,14 @@ function PageJumbotron(props: Props) {
       </div>
       <div className="bg-blue-700 px-2 py-4 text-white">
         <p className="text-center font-semibold ">
-          BC Day Weekend • Transfer Beach & Downtown Ladysmith
+          {/* Almost always BC Day Weekend */}
+          August 3-4, 2024 • Transfer Beach & Downtown Ladysmith
         </p>
       </div>
       {title && subtitle ? (
         <div className="bg-cyan-300 px-4 py-8 text-blue-700">
           <div className="">
-            <h2 className="font-heading text-center text-xl font-bold md:text-3xl">
+            <h2 className="text-center font-heading text-xl font-bold md:text-3xl">
               {title}
             </h2>
             <p className="mx-auto mt-2 max-w-prose text-sm md:text-base">

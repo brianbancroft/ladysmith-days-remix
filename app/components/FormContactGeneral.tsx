@@ -4,16 +4,18 @@ type FormProps = {
   title?: string
   description: string
   route: string
+  placeholder?: string
 }
 
 const FormContactGeneral = ({
   title = 'Contact Us',
   description,
   route,
+  placeholder,
 }: FormProps) => {
   return (
     <div className="max-w-prose">
-      <h1 className="font-heading my-2 ml-2 text-4xl font-semibold">{title}</h1>
+      <h1 className="my-2 ml-2 font-heading text-4xl font-semibold">{title}</h1>
       <p className="ml-2">{description}</p>
       <Form className="mt-3 flex flex-col" action={route} method="post">
         <input
@@ -33,7 +35,7 @@ const FormContactGeneral = ({
         <textarea
           required
           name="message"
-          placeholder="Tell us what you think..."
+          placeholder={placeholder ?? 'Tell us what you think...'}
           className="m-2 p-2"
         ></textarea>
         <button
