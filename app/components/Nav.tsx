@@ -24,14 +24,25 @@ function Nav() {
       <div
         id="navLinks-desktop"
         className={classNames(
-          'grid hidden grid-cols-4  gap-x-6 bg-blue-700/60 py-2 capitalize text-white underline transition-all duration-300 md:flex',
+          'text-blue hidden grid-cols-4 gap-x-6 rounded-r-full border-2 border-blue-400 bg-white px-8 py-2 capitalize text-blue-700 underline transition-all duration-700 md:flex',
           visible ? 'ml-12' : '-ml-[50vw]',
         )}
       >
-        <Link to="/">home</Link>
-        <Link to="/volunteer">volunteer</Link>
-        <Link to="/vendor">vendor</Link>
-        <Link to="/sponsor">sponsor</Link>
+        <Link to="/" className="font-medium uppercase">
+          home
+        </Link>
+        <Link to="/volunteer" className="font-medium uppercase">
+          volunteer
+        </Link>
+        <Link to="/vendor" className="font-medium uppercase">
+          vendor
+        </Link>
+        <Link to="/sponsor" className="font-medium uppercase">
+          sponsor
+        </Link>
+        <Link to="/citizen-of-the-year" className="font-medium uppercase">
+          citizen of the year
+        </Link>
       </div>
 
       {/* Mobile View */}
@@ -55,12 +66,12 @@ function Nav() {
           >
             <Menu.Items
               className={`
-                text-ld-dark-blue 
-                absolute
+                absolute 
                 -left-2
                 top-[4.1rem]
-                z-40 w-56 origin-top-right divide-y 
-                divide-gray-100 rounded-r-md bg-white 
+                z-40
+                w-56 origin-top-right divide-y divide-gray-100 
+                rounded-r-md bg-white text-ld-dark-blue 
                 shadow-lg ring-1 ring-black 
                 ring-opacity-5 focus:outline-none 
               `}

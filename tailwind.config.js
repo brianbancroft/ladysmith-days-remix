@@ -17,7 +17,6 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'hero-image': "url('/hero-homepage.jpg')",
         'hero-citizen-of-the-year': "url('/hero-citizen-of-the-year.jpg')",
         sponsor: "url('/placeholder-sponsor.jpg')",
         vendor: "url('/placeholder-vendor.jpg')",
@@ -35,7 +34,7 @@ export default {
         'call-vendor-foodvendor': "url('/backgrounds/link-vendor-food.png')",
         'header-coty': "url('/backgrounds/header-coty.png')",
         'header-homepage': "url('/backgrounds/header-homepage.png')",
-        'header-sponsor': "url('/backgrounds/header-sponsor.png')",
+        'header-sponsor': "url('/backgrounds/header-sponsor.jpg')",
         'header-vendor': "url('/backgrounds/header-vendor.png')",
         'header-volunteer': "url('/backgrounds/header-volunteer.png')",
         'sponsor-coty-1': "url('/backgrounds/sponsor-coty-1.png')",
