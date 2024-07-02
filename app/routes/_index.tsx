@@ -68,8 +68,9 @@ export default function Index() {
             items-center
             bg-blue-700 bg-opacity-50
             p-4
-            pt-12
+            py-12
             align-middle
+          
             text-white
             md:align-baseline
           "
@@ -85,7 +86,7 @@ export default function Index() {
               height={300}
               width={350}
             />
-            <h2 className="fade-in relative right-4 my-12 justify-center rounded-r-xl bg-white p-2 pl-8 font-heading text-5xl font-black text-blue-600 md:right-0 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
+            <h2 className="fade-in relative right-4 my-6 justify-center rounded-r-xl bg-white p-2 pl-8 font-heading text-5xl font-black text-blue-600 md:right-0 md:my-12 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
               Celebrate Ladysmith
             </h2>
             <TimerClock />
@@ -93,7 +94,7 @@ export default function Index() {
               August 3-4, 2024
             </h3>
           </div>
-          <div className="relative ">
+          <div className="invisible relative bottom-5 md:visible">
             <ScrollDownIndicator />
           </div>
         </div>
@@ -102,13 +103,13 @@ export default function Index() {
         <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
           <Link
             to="/volunteer"
-            className="btn btn-primary text-3xl text-lime-300"
+            className="btn btn-primary font-heading text-2xl text-ld-yellow md:text-4xl"
           >
             Volunteer
           </Link>
           <Link
             to="/sponsor"
-            className="btn btn-primary text-3xl text-lime-300"
+            className="btn btn-primary font-heading text-2xl text-ld-yellow md:text-4xl"
           >
             Sponsor
           </Link>
