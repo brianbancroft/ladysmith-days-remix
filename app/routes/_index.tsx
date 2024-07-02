@@ -5,10 +5,13 @@ import type { MetaFunction } from '@remix-run/node'
 import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import { HomepageSponsors } from '~/components/HomepageSponsors'
+import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
+
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
 import SectionEventSummary from '~/components/SectionEventSummary'
 import SectionOurPlan from '~/components/SectionOurPlan'
 import SectionSocialContact from '~/components/SectionSocialContact'
+import { SectionSchedule } from '~/components/SectionSchedule'
 import TimerClock from '~/components/TimerClock'
 export const meta: MetaFunction = () => {
   return [
@@ -49,10 +52,10 @@ export default function Index() {
         <div
           id="introduction"
           className="
-              bg-header-homepage-mobile
-              flex h-screen
-              flex-col
-              justify-center bg-gray-500 bg-cover
+              flex
+              h-screen flex-col
+              justify-center
+              bg-gray-500 bg-header-homepage-mobile bg-cover
               bg-center bg-no-repeat
               bg-origin-padding md:bg-header-homepage
             "
@@ -87,7 +90,7 @@ export default function Index() {
             </h2>
             <TimerClock />
             <h3 className="fade-in-delay my-4 mt-12 font-heading text-xl font-light italic opacity-0">
-              august long weekend
+              August 3-4, 2024
             </h3>
           </div>
           <div className="relative ">
@@ -113,15 +116,17 @@ export default function Index() {
         <HomepageSponsors />
       </section>
 
-      <div className="container mx-auto">
+      <div className="w-full bg-blue-700 pb-6">
         {/* Three variants:x
               1. The plan (early times)
               2. The schedule. (as soon as the schedule is available)
               3. The gratitude (TBD)
              */}
 
-        {/* {scheduleVisible && <SectionSchedule />} */}
-        <SectionOurPlan />
+        <SectionSchedule />
+        <HomepageSponsors2 />
+
+        {/* <SectionOurPlan /> */}
 
         {/* <SectionGratitude /> */}
 

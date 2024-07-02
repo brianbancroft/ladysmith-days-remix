@@ -10,7 +10,7 @@ const SectionSocialContact = () => {
       <section
         id="keep-in-touch"
         className="
-            my-4
+            my-8
             flex
             flex-col
             bg-blue-800
@@ -36,7 +36,7 @@ const SectionSocialContact = () => {
         </div>
         <div className="max-w-prose md:w-3/5">
           <div className="flex items-center transition ease-in-out hover:text-orange-500">
-            <h1 className="font-heading my-3 font-sans text-xl md:text-4xl">
+            <h1 className="font-sans my-3 font-heading text-xl md:text-4xl">
               Keep up to date
             </h1>
             <svg
