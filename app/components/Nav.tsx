@@ -43,6 +43,9 @@ function Nav() {
         <Link to="/citizen-of-the-year" className="font-medium uppercase">
           citizen of the year
         </Link>
+        <Link to="/expo" className="font-medium uppercase">
+          expo
+        </Link>
       </div>
 
       {/* Mobile View */}
@@ -159,6 +162,23 @@ function Nav() {
                       className="p-3 text-2xl"
                     >
                       sponsor
+                    </Link>
+                  </div>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active, close }) => (
+                  <div className="flex items-center">
+                    <Link
+                      onClick={() => {
+                        setVisible(false)
+                        close()
+                      }}
+                      to="/expo"
+                      style={{ color: 'darkblue' }}
+                      className="p-3 text-2xl"
+                    >
+                      expo
                     </Link>
                   </div>
                 )}
