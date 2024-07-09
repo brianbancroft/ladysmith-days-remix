@@ -22,7 +22,7 @@ export function SectionSchedule() {
         <h3 className="mb-2 text-xl font-semibold text-red-500">
           DOWNTOWN 1<sup>ST</sup> AVE
         </h3>
-        <ul className="mb-4 list-inside list-disc">
+        <ul className="mb-4 list-inside list-disc lg:text-xl">
           <li className="text-ld-dark-blue">SOAP BOX DERBY | 10 AM</li>
           <li className="text-ld-dark-blue">SKATEBOARD DEMO | 10 AM</li>
           <li className="text-ld-dark-blue">
@@ -33,7 +33,7 @@ export function SectionSchedule() {
         <h3 className="mb-2 text-xl font-semibold text-red-500">
           TRANSFER BEACH
         </h3>
-        <ul className="mb-4 list-inside list-disc">
+        <ul className="mb-4 list-inside list-disc lg:text-xl">
           <li className="text-ld-dark-blue">FOOD & MERCHANDISE VENDORS</li>
           <li className="text-ld-dark-blue">BEER GARDEN</li>
           <li className="font-semibold text-ld-dark-blue">
@@ -64,7 +64,7 @@ export function SectionSchedule() {
         <h3 className="mb-2 text-xl font-semibold text-purple-500">
           TRANSFER BEACH
         </h3>
-        <ul className="mb-4 list-inside list-disc">
+        <ul className="mb-4 list-inside list-disc lg:text-xl">
           <li className="text-ld-dark-blue">FOOD VENDORS</li>
           <li className="font-semibold text-ld-dark-blue">
             LDCU KIDS FUN ZONE | 11 AM
@@ -73,35 +73,46 @@ export function SectionSchedule() {
         </ul>
       </div>
 
-      <div className="relative bottom-3 mx-auto md:w-3/4">
-        <div className="-rotate-1 transform bg-ld-yellow p-6 shadow-lg">
-          <h3 className="mb-2 text-2xl font-bold text-ld-dark-blue">
-            <span className="font-heading text-3xl">
-              MID-ISLAND CO-OP BANDS ON THE BEACH{' '}
-            </span>
-            | STARTS AT 12:30 PM
-          </h3>
-          <p className="mb-2 text-lg font-light text-ld-purple">FEATURING</p>
-          <ul className="mb-4 space-y-1 text-xl font-semibold text-ld-purple">
-            <li>STEPHANIE ROTH PERFORMING ARTS STUDIO • PEACE, LOVE AND JOY</li>
-            <li>
-              SARAH LEO • SOL ARAVENA • PROJECT FLAMENCO • BANDS ON THE BEACH
-            </li>
-            <li>
-              DOCTORS + BARSBY SCHOOL OF ROCK • LINE DANCING WITH TAILGATE
-            </li>
-          </ul>
-          <p className="my-3 text-lg font-light text-blue-600">
-            CITIZEN OF THE YEAR PRESENTATION
-          </p>
-          <p className="mb-3 text-2xl font-bold text-ld-purple">
-            <span className="text-lg font-light">AND</span> SUNSET STRIP
-          </p>
-          <p className="my-1 text-2xl font-bold text-blue-600">
-            LDCU FIREWORKS STARTING AT 10 PM
-          </p>
+      <section className="relative bottom-3 mx-auto mb-12 lg:mb-24">
+        <div className="mx-auto md:w-3/4">
+          <div className="-rotate-2 bg-ld-light-blue p-1">
+            <div className="rotate-1 bg-blue-700 p-2">
+              <div className="transform bg-ld-yellow p-6 shadow-lg">
+                <h3 className="mb-2 text-2xl font-bold text-ld-dark-blue">
+                  <span className="font-heading text-3xl">
+                    MID-ISLAND CO-OP BANDS ON THE BEACH{' '}
+                  </span>
+                  | STARTS AT 12:30 PM
+                </h3>
+                <p className="mb-2 text-lg font-light text-ld-purple">
+                  FEATURING
+                </p>
+                <ul className="mb-4 space-y-1 text-xl font-semibold text-ld-purple">
+                  <li>
+                    STEPHANIE ROTH PERFORMING ARTS STUDIO • PEACE, LOVE AND JOY
+                  </li>
+                  <li>
+                    SARAH LEO • SOL ARAVENA • PROJECT FLAMENCO • BANDS ON THE
+                    BEACH
+                  </li>
+                  <li>
+                    DOCTORS + BARSBY SCHOOL OF ROCK • LINE DANCING WITH TAILGATE
+                  </li>
+                </ul>
+                <p className="my-3 text-lg font-light text-blue-600">
+                  CITIZEN OF THE YEAR PRESENTATION
+                </p>
+                <p className="mb-3 text-2xl font-bold text-ld-purple">
+                  <span className="text-lg font-light">AND</span> SUNSET STRIP
+                </p>
+                <p className="my-1 text-2xl font-bold text-blue-600">
+                  LDCU FIREWORKS STARTING AT 10 PM
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
