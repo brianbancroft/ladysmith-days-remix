@@ -82,7 +82,9 @@ export default {
         'sponsor-dq': "url('/backgrounds/sponsor-sponsor-dairyqueen.png')",
         'sponsor-dollarstore':
           "url('/backgrounds/sponsor-sponsor-dollarstore.png')",
+        'sponsor-fmi': "url('/backgrounds/sponsor-sponsor-fmi.jpg')",
         'sponsor-gfl': "url('/backgrounds/sponsor-sponsor-gfl.png')",
+
         'sponsor-eagles': "url('/backgrounds/sponsor-sponsor-eagles.png')",
         'sponsor-eagles-ladies':
           "url('/backgrounds/sponsor-sponsor-eagles-ladies.png')",
