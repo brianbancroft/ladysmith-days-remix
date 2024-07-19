@@ -96,7 +96,7 @@ export function SectionSchedule() {
                   <li>
                     SARAH LEO <span className="text-sm">1:30</span> • SOL
                     ARAVENA <span className="text-sm">2:10</span> • PROJECT
-                    FLAMENCO <span className="text-sm">12:30</span>
+                    FLAMENCO <span className="text-sm">3:15</span>
                   </li>
                   <li>
                     DOCTORS + BARSBY SCHOOL OF ROCK{' '}

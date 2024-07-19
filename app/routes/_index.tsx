@@ -6,17 +6,25 @@ import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import { HomepageSponsors } from '~/components/HomepageSponsors'
 import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
-
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
 import SectionEventSummary from '~/components/SectionEventSummary'
-import SectionOurPlan from '~/components/SectionOurPlan'
-import SectionSocialContact from '~/components/SectionSocialContact'
+// import SectionOurPlan from '~/components/SectionOurPlan'
 import { SectionSchedule } from '~/components/SectionSchedule'
+import SectionSocialContact from '~/components/SectionSocialContact'
 import TimerClock from '~/components/TimerClock'
+
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Ladysmith Days' },
-    { name: 'description', content: 'Celerate with us' },
+    { title: 'Ladysmith Days - August 3,4 2024' },
+    {
+      property: 'og:title',
+      content: 'Ladysmith Days - August 3,4 2024',
+    },
+    {
+      name: 'description',
+      content:
+        'Ladysmith Days is a two-day event in Ladysmith, BC featuring free family fun, live music, food, and more',
+    },
   ]
 }
 
