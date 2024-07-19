@@ -105,7 +105,8 @@ export function SectionSchedule() {
                   </li>
                 </ul>
                 <p className="my-3 text-lg font-light text-blue-600">
-                  CITIZEN OF THE YEAR PRESENTATION
+                  CITIZEN OF THE YEAR PRESENTATION{' '}
+                  <span className="text-sm">8:00</span>
                 </p>
                 <p className="mb-3 text-2xl font-bold text-ld-purple">
                   <span className="text-lg font-light">AND</span> SUNSET STRIP{' '}
