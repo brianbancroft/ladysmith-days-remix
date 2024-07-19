@@ -89,21 +89,27 @@ export function SectionSchedule() {
                 </p>
                 <ul className="mb-4 space-y-1 text-xl font-semibold text-ld-purple">
                   <li>
-                    STEPHANIE ROTH PERFORMING ARTS STUDIO • PEACE, LOVE AND JOY
+                    STEPHANIE ROTH PERFORMING ARTS STUDIO{' '}
+                    <span className="text-sm">12:30</span> • PEACE, LOVE AND JOY{' '}
+                    <span className="text-sm">12:45</span>
                   </li>
                   <li>
-                    SARAH LEO • SOL ARAVENA • PROJECT FLAMENCO • BANDS ON THE
-                    BEACH
+                    SARAH LEO <span className="text-sm">1:30</span> • SOL
+                    ARAVENA <span className="text-sm">2:10</span> • PROJECT
+                    FLAMENCO <span className="text-sm">12:30</span>
                   </li>
                   <li>
-                    DOCTORS + BARSBY SCHOOL OF ROCK • LINE DANCING WITH TAILGATE
+                    DOCTORS + BARSBY SCHOOL OF ROCK{' '}
+                    <span className="text-sm">4:30</span> • LINE DANCING WITH
+                    TAILGATE <span className="text-sm">6:30</span>
                   </li>
                 </ul>
                 <p className="my-3 text-lg font-light text-blue-600">
                   CITIZEN OF THE YEAR PRESENTATION
                 </p>
                 <p className="mb-3 text-2xl font-bold text-ld-purple">
-                  <span className="text-lg font-light">AND</span> SUNSET STRIP
+                  <span className="text-lg font-light">AND</span> SUNSET STRIP{' '}
+                  <span className="text-sm">8:30</span>
                 </p>
                 <p className="my-1 text-2xl font-bold text-blue-600">
                   LDCU FIREWORKS STARTING AT 10 PM
