@@ -47,8 +47,6 @@ export async function action({ request }: ActionFunctionArgs) {
   const token = formData.get('_captcha') as string
   const key = process.env.RECAPTCHA_SECRET_KEY as string
 
-  console.log('Key ', key)
-
   const recaptchaResult = await getRecaptchaScore(token, key)
 
   if (!recaptchaResult) {
@@ -75,6 +73,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:image"
+          content="https://ladysmithdays.com/images/ladysmith-days-oglarge.png"
+        />
         <Meta />
         <Links />
       </head>
