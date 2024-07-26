@@ -12,7 +12,7 @@ function TimerClock() {
 
   //   calculate initial time, and create a function that will update the time remaining every second
   useEffect(() => {
-    const countdownDate = new Date('August 2, 2024 16:30:00').getTime()
+    const countdownDate = new Date('August 3, 2024 10:00:00').getTime()
 
     setInterval(() => {
       const now = new Date().getTime()
