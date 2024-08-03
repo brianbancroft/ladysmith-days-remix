@@ -12,7 +12,7 @@ function TimerClock() {
 
   //   calculate initial time, and create a function that will update the time remaining every second
   useEffect(() => {
-    const countdownDate = new Date('August 3, 2024 10:00:00').getTime()
+    const countdownDate = new Date('August 3, 2024 8:00:00').getTime()
 
     setInterval(() => {
       const now = new Date().getTime()
@@ -42,11 +42,9 @@ function TimerClock() {
     }
 
     return timeAvailable <= 0 ? (
-      <div className="flex flex-col items-center justify-center bg-blue-600 p-4 uppercase text-white ">
-        <h1 className="neon-text text-3xl font-thin tracking-widest">
-          Ladysmith Days is Here
-        </h1>
-      </div>
+      <h1 className="neon-text text-3xl font-thin tracking-widest text-white">
+        Ladysmith Days is Here
+      </h1>
     ) : (
       <div className="mx-auto grid grid-cols-4 grid-rows-2 justify-items-center gap-x-4 font-bold uppercase text-white">
         <div className="">{timeRemaining.days}</div>
