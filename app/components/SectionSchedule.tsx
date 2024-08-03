@@ -82,7 +82,7 @@ export function SectionSchedule() {
                   <span className="font-heading text-3xl">
                     MID-ISLAND CO-OP BANDS ON THE BEACH{' '}
                   </span>
-                  | STARTS AT 12:30 PM
+                  | STARTS AT 12:15 PM
                 </h3>
                 <p className="mb-2 text-lg font-light text-ld-purple">
                   FEATURING
@@ -90,7 +90,7 @@ export function SectionSchedule() {
                 <ul className="mb-4 space-y-1 text-xl font-semibold text-ld-purple">
                   <li>
                     STEPHANIE ROTH PERFORMING ARTS STUDIO{' '}
-                    <span className="text-sm">12:30</span> • PEACE, LOVE AND JOY{' '}
+                    <span className="text-sm">12:15</span> • PEACE, LOVE AND JOY{' '}
                     <span className="text-sm">12:45</span>
                   </li>
                   <li>
