@@ -4,14 +4,9 @@ import { toast } from 'react-toastify'
 import type { MetaFunction } from '@remix-run/node'
 import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
-import { HomepageSponsors } from '~/components/HomepageSponsors'
-import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
 import SectionEventSummary from '~/components/SectionEventSummary'
-// import SectionOurPlan from '~/components/SectionOurPlan'
-import { SectionSchedule } from '~/components/SectionSchedule'
 import SectionSocialContact from '~/components/SectionSocialContact'
-import TimerClock from '~/components/TimerClock'
 
 export const meta: MetaFunction = () => {
   return [
@@ -97,17 +92,22 @@ export default function Index() {
             <h2 className="fade-in relative right-4 my-6 justify-center rounded-r-xl bg-white p-2 pl-8 font-heading text-5xl font-black text-blue-600 md:right-0 md:my-12 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
               Celebrate Ladysmith
             </h2>
-            <TimerClock />
-            <h3 className="fade-in-delay my-4 mt-12 font-heading text-xl font-light italic opacity-0">
+            <aside className=" rounded bg-purple-600/50 p-4 ">
+              <h1 className="neon-text text-3xl font-thin tracking-widest text-white">
+                Thanks for a great event!
+              </h1>
+            </aside>
+            {/* <TimerClock /> */}
+            {/* <h3 className="fade-in-delay my-4 mt-12 font-heading text-xl font-light italic opacity-0">
               August 3-4, 2024
-            </h3>
+            </h3> */}
           </div>
           <div className="invisible relative bottom-5 md:visible">
             <ScrollDownIndicator />
           </div>
         </div>
 
-        <SectionEventSummary />
+        <SectionEventSummary eventOver />
         <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
           <Link
             to="/volunteer"
@@ -122,7 +122,7 @@ export default function Index() {
             Sponsor
           </Link>
         </nav>
-        <HomepageSponsors />
+        {/* <HomepageSponsors /> */}
       </section>
 
       <div className="w-full bg-blue-700 pb-6">
@@ -132,12 +132,10 @@ export default function Index() {
               3. The gratitude (TBD)
              */}
 
-        <SectionSchedule />
-        <HomepageSponsors2 />
+        {/* <SectionSchedule /> */}
+        {/* <HomepageSponsors2 /> */}
 
         {/* <SectionOurPlan /> */}
-
-        {/* <SectionGratitude /> */}
 
         <SectionSocialContact />
       </div>

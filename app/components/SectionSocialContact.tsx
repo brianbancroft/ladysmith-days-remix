@@ -10,7 +10,6 @@ const SectionSocialContact = () => {
       <section
         id="keep-in-touch"
         className="
-            my-8
             flex
             flex-col
             bg-blue-800
