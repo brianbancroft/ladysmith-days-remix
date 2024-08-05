@@ -107,8 +107,8 @@ export default function Index() {
           </div>
         </div>
 
-        <SectionEventSummary eventOver />
-        <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
+        {/* <SectionEventSummary eventOver /> */}
+        {/* <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
           <Link
             to="/volunteer"
             className="btn btn-primary font-heading text-2xl text-ld-yellow md:text-4xl"
@@ -121,7 +121,7 @@ export default function Index() {
           >
             Sponsor
           </Link>
-        </nav>
+        </nav> */}
         {/* <HomepageSponsors /> */}
       </section>
 
@@ -139,7 +139,7 @@ export default function Index() {
 
         <SectionSocialContact />
       </div>
-
+      {/* 
       <div className="my-2 grid h-52 grid-cols-1 gap-1 md:hidden">
         <a
           href="https://ladysmith.ca"
@@ -158,7 +158,7 @@ export default function Index() {
         >
           <div className="my-1 flex  h-full w-full justify-center bg-sponsor-homepage-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
         </a>
-      </div>
+      </div> */}
     </main>
   )
 }
