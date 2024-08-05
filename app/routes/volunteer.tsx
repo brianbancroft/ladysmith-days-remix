@@ -104,18 +104,15 @@ function Volunteer() {
             Ladysmith.
           </p>
           <p className="ml-2 py-2">
-            We are looking for help during the event. If you like playing games,
-            directing cars, selling tickets, or having fun and meeting friends,
-            we will certainly have something for you!
+            We are looking for anyone who wishes to join the Ladysmith
+            Celebrations Society. This is the board who is planning the 2025
+            event, and who will be forming early that year,
           </p>
-          <p className="ml-2">
-            If you want to volunteer for this year's event, joining us as as
-            easy as filling out the form below:
-          </p>
+
           <iframe
             title="Volunteer Form"
             className="mt-6 h-[50vh] w-full bg-slate-300"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdr29LJ8XJE6nfxxMOSlJgVS6U27cEKYfjfnNIlx_MbNYP7rw/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeb-9EzwupNAoENKyKHwW2uPB7ryOysBQSlWDyOc8Z55b-4vg/viewform?embedded=true"
             frameBorder="0"
           />
         </div>
