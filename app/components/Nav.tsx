@@ -34,18 +34,18 @@ function Nav() {
         <Link to="/volunteer" className="font-medium uppercase">
           volunteer
         </Link>
-        <Link to="/vendor" className="font-medium uppercase">
+        {/* <Link to="/vendor" className="font-medium uppercase">
           vendor
-        </Link>
+        </Link> */}
         <Link to="/sponsor" className="font-medium uppercase">
           sponsor
         </Link>
         <Link to="/citizen-of-the-year" className="font-medium uppercase">
           citizen of the year
         </Link>
-        <Link to="/expo" className="font-medium uppercase">
+        {/* <Link to="/expo" className="font-medium uppercase">
           expo
-        </Link>
+        </Link> */}
       </div>
 
       {/* Mobile View */}
@@ -131,7 +131,7 @@ function Nav() {
                 )}
               </Menu.Item>
 
-              <Menu.Item>
+              {/* <Menu.Item>
                 {({ active, close }) => (
                   <div className="flex items-center">
                     <Link
@@ -147,7 +147,7 @@ function Nav() {
                     </Link>
                   </div>
                 )}
-              </Menu.Item>
+              </Menu.Item> */}
 
               <Menu.Item>
                 {({ active, close }) => (
@@ -166,7 +166,7 @@ function Nav() {
                   </div>
                 )}
               </Menu.Item>
-              <Menu.Item>
+              {/* <Menu.Item>
                 {({ active, close }) => (
                   <div className="flex items-center">
                     <Link
@@ -182,7 +182,7 @@ function Nav() {
                     </Link>
                   </div>
                 )}
-              </Menu.Item>
+              </Menu.Item> */}
             </Menu.Items>
           </Transition>
         </Menu>
