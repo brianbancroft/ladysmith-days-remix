@@ -79,7 +79,7 @@ function SponsorPage() {
           >
             <h2 className="mx-auto w-2/3 text-2xl">
               Ladysmith Days could not happen without the help of our community
-              partners for 2023:
+              partners for 2024:
             </h2>
           </div>
 

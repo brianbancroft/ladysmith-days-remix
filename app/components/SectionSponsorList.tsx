@@ -36,7 +36,6 @@ const sponsorList = {
     {
       name: 'Four One One Apparel',
       imageClassname: 'bg-sponsor-411',
-      copy: 'For time spent negotiating and $2000 directly towards the wrestling event',
     },
     {
       name: 'Eagles Ladies Auxillary 2101',
@@ -58,9 +57,12 @@ const sponsorList = {
       darkBackground: true,
     },
     {
-      name: 'McDonalds',
-      imageClassname: 'bg-sponsor-mcdonalds',
+      name: 'Mactier Real Estate Group',
+      text: true,
+      copy: 'Financial asssitance for soap box',
+      specialEvent: true,
     },
+
     {
       name: 'Country Grocer',
       imageClassname: 'bg-sponsor-countrygrocer',
@@ -116,12 +118,6 @@ const sponsorList = {
     },
 
     {
-      name: 'Market 2 All',
-      copy: 'For over a decade of web support and consulting',
-      imageClassname: 'bg-sponsor-market2all',
-    },
-
-    {
       name: 'Spyder Graphix',
       copy: 'For printing the signage to Ladysmith Days, and other logistical support',
       imageClassname: 'bg-sponsor-spyder-graphix',
@@ -137,16 +133,9 @@ const sponsorList = {
       imageClassname: 'bg-sponsor-pharmasave',
     },
     {
-      name: 'Ladysmith Whole Health Pharmacy',
-      copy: 'For a donation',
-      imageClassname: 'bg-sponsor-wholehealth',
-      text: true,
-    },
-    {
-      name: 'Oceanview Community Church',
-      copy: 'Assistance with the soap box',
-      imageClassname: 'bg-sponsor-oceanview',
-      specialEvent: true,
+      name: 'Home Hardware',
+      copy: 'For leading the nail driving competition, as well as providing many of our prizes',
+      imageClassname: 'bg-sponsor-homehardware',
     },
   ],
   bronze: [
@@ -165,10 +154,9 @@ const sponsorList = {
       copy: 'Financial support for the childrens entertainment',
     },
     {
-      name: 'Home Hardware',
-      copy: 'For leading the nail driving competition, as well as providing many of our prizes',
-      imageClassname: 'bg-sponsor-homehardware',
+      name: 'Otter Point Marina',
     },
+
     // {
     //   name: 'Ladysmith Community Marina',
     //   copy: 'For providing the facilities used by the Bullhead Derby',
@@ -191,32 +179,21 @@ const sponsorList = {
       text: true,
       copy: 'They supply the greasy pole pole',
     },
-    {
-      name: 'Mactier Real Estate Group',
-      text: true,
-      copy: 'Financial asssitance for soap box',
-      specialEvent: true,
-    },
+
     {
       name: 'Little Valley Restoration',
       imageClassname: 'bg-sponsor-little-valley',
       copy: 'Financial asssitance for soap box',
       specialEvent: true,
     },
-    // In past, they brought the stage
-    // {
-    //   name: 'Ryler Holdings Ltd',
-    //   copy: 'For financial and material support, including transport as well as the stage',
-    //   imageClassname: 'bg-sponsor-ryler',
-    // },
   ],
 }
 
 function SectionGratitude() {
   return (
     <section className="my-8">
-      <div className="bg-ld-yellow rounded-xl p-4">
-        <h3 className="font-heading text-ld-dark-blue text-center text-2xl font-semibold">
+      <div className="rounded-xl bg-ld-yellow p-4">
+        <h3 className="text-center font-heading text-2xl font-semibold text-ld-dark-blue">
           Main sponsors
         </h3>
       </div>
@@ -226,7 +203,7 @@ function SectionGratitude() {
       ))}
 
       <div className="bg-ld-yellow p-4">
-        <h3 className="font-heading text-ld-dark-blue text-center text-2xl font-semibold">
+        <h3 className="text-center font-heading text-2xl font-semibold text-ld-dark-blue">
           Gold sponsors
         </h3>
       </div>
@@ -239,7 +216,7 @@ function SectionGratitude() {
       </div>
 
       <div className="bg-ld-yellow p-4">
-        <h3 className="font-heading text-ld-dark-blue text-center text-2xl font-semibold">
+        <h3 className="text-center font-heading text-2xl font-semibold text-ld-dark-blue">
           Silver sponsors
         </h3>
       </div>
@@ -251,7 +228,7 @@ function SectionGratitude() {
       </div>
 
       <div className="bg-ld-yellow p-4">
-        <h3 className="font-heading text-ld-dark-blue text-center text-2xl font-semibold">
+        <h3 className="text-center font-heading text-2xl font-semibold text-ld-dark-blue">
           Bronze sponsors
         </h3>
       </div>

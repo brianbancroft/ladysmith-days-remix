@@ -5,15 +5,19 @@ import type { MetaFunction } from '@remix-run/node'
 import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
-import SectionEventSummary from '~/components/SectionEventSummary'
+// import SectionEventSummary from '~/components/SectionEventSummary'
+import SectionOurPlan from '~/components/SectionOurPlan'
 import SectionSocialContact from '~/components/SectionSocialContact'
+import TimerClock from '~/components/TimerClock'
+import { HomepageSponsors } from '~/components/HomepageSponsors'
+import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Ladysmith Days - August 3,4 2024' },
+    { title: 'Ladysmith Days - August 2,3 2025' },
     {
       property: 'og:title',
-      content: 'Ladysmith Days - August 3,4 2024',
+      content: 'Ladysmith Days - August 2,3 2025',
     },
     {
       name: 'description',
@@ -51,7 +55,7 @@ export default function Index() {
 
   return (
     <main className="w-full">
-      <section className="bg-blue-700  pb-6" id="hero">
+      <section className="bg-blue-700 pb-6" id="hero">
         <div
           id="introduction"
           className="
@@ -92,15 +96,11 @@ export default function Index() {
             <h2 className="fade-in relative right-4 my-6 justify-center rounded-r-xl bg-white p-2 pl-8 font-heading text-5xl font-black text-blue-600 md:right-0 md:my-12 md:block md:bg-transparent md:p-0 md:pl-2 md:text-white">
               Celebrate Ladysmith
             </h2>
-            <aside className=" rounded bg-purple-600/50 p-4 ">
-              <h1 className="neon-text text-3xl font-thin tracking-widest text-white">
-                Thanks for a great event!
-              </h1>
-            </aside>
-            {/* <TimerClock /> */}
-            {/* <h3 className="fade-in-delay my-4 mt-12 font-heading text-xl font-light italic opacity-0">
-              August 3-4, 2024
-            </h3> */}
+
+            <TimerClock />
+            <h3 className="fade-in-delay mb-4 font-heading text-xl font-light italic opacity-0">
+              August 2-3, 2025
+            </h3>
           </div>
           <div className="invisible relative bottom-5 md:visible">
             <ScrollDownIndicator />
@@ -108,7 +108,7 @@ export default function Index() {
         </div>
 
         {/* <SectionEventSummary eventOver /> */}
-        {/* <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
+        <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
           <Link
             to="/volunteer"
             className="btn btn-primary font-heading text-2xl text-ld-yellow md:text-4xl"
@@ -121,8 +121,8 @@ export default function Index() {
           >
             Sponsor
           </Link>
-        </nav> */}
-        {/* <HomepageSponsors /> */}
+        </nav>
+        <HomepageSponsors />
       </section>
 
       <div className="w-full bg-blue-700 pb-6">
@@ -135,11 +135,12 @@ export default function Index() {
         {/* <SectionSchedule /> */}
         {/* <HomepageSponsors2 /> */}
 
-        {/* <SectionOurPlan /> */}
+        <SectionOurPlan />
 
         <SectionSocialContact />
       </div>
-      {/* 
+      <HomepageSponsors2 />
+
       <div className="my-2 grid h-52 grid-cols-1 gap-1 md:hidden">
         <a
           href="https://ladysmith.ca"
@@ -158,7 +159,7 @@ export default function Index() {
         >
           <div className="my-1 flex  h-full w-full justify-center bg-sponsor-homepage-3 bg-contain bg-center bg-no-repeat px-12 py-6"></div>
         </a>
-      </div> */}
+      </div>
     </main>
   )
 }

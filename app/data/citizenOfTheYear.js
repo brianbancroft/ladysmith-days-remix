@@ -1,19 +1,23 @@
 import barryFrech from './photos/coty-barry-frech-2022.png'
 import kathyHolmes from './photos/coty-kathy-holmes-2023.png'
 
-console.log('kathyHolmes', kathyHolmes)
-
 export const latestRecipient = {
-  name: 'Kathy Holmes',
-  year: '2023',
-  image: kathyHolmes,
-  copy: `
-      Kathy Holmes is well-known around the arts community. Over  many years, she has spent countless hours promoting the arts for Ladysmith, ensuring the continuation of many programs as well as raising funds for supplies to support young artists. A highlight in her service was leading the arts council from its own waterfront gallery to a temporary home at the old Davis Rd school when circumstances required them to vacate, and then finding a new home downtown at the corner of 1st and High St where the works of local artists can now be seen by many.  
-  `,
+  year: '2024',
+  name: 'Dave Judson and the Ladysmith Sportsmen Club',
+  image: '',
+  copy: `The Ladysmith Sportsment Club is not seen in town as much as other organizations as they are focused outside the town limits. In addition to managing the Bush Creek Fish Hatchery, they also lead the annual Earth Day cleanup in the forest lands around Ladysmith.`,
 }
 
 // Must be maximum length of four
 export const recentRecipients = [
+  {
+    name: 'Kathy Holmes',
+    year: '2023',
+    image: kathyHolmes,
+    copy: `
+      Kathy Holmes is well-known around the arts community. Over  many years, she has spent countless hours promoting the arts for Ladysmith, ensuring the continuation of many programs as well as raising funds for supplies to support young artists. A highlight in her service was leading the arts council from its own waterfront gallery to a temporary home at the old Davis Rd school when circumstances required them to vacate, and then finding a new home downtown at the corner of 1st and High St where the works of local artists can now be seen by many.  
+  `,
+  },
   {
     name: 'Barry Frech',
     year: '2022',

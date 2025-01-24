@@ -4,7 +4,7 @@ function SectionOurPlan() {
   return (
     <section
       id="plan-content"
-      className="mt-4 grid grid-cols-1 gap-2 md:mt-8 md:grid-cols-2"
+      className="mx-auto mb-12 grid max-w-[1200px] grid-cols-1 gap-2 bg-blue-600 p-4 pb-8 shadow-xl md:grid-cols-2"
     >
       <div className="h-full rounded-t bg-lime-300 p-4 text-blue-700 md:rounded-none md:border-l-8 md:border-l-lime-700 md:px-12 md:py-8">
         <h2 className="my-3 text-3xl font-semibold">Our Plan</h2>
