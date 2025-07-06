@@ -46,9 +46,7 @@ export function SectionSchedule() {
           <li className="text-ld-dark-blue">NAIL DRIVING CONTEST | 1 PM</li>
           <li className="text-ld-dark-blue">ZUCCHINI RACES | 2 PM</li>
           <li className="text-ld-dark-blue">GREASY POLE COMPETITION | 3 PM</li>
-          <li className="text-ld-dark-blue">
-            WATERMELON EATING CONTEST | 3 PM
-          </li>
+
           <li className="text-ld-dark-blue">BEER GARDEN | 12 PM - 10 PM</li>
           <li className="font-semibold italic text-ld-dark-blue">
             PROFESSIONAL WRESTLING | 5:15 PM
