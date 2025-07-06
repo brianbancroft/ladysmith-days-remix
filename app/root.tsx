@@ -73,10 +73,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
+        {/* <meta
           property="og:image"
           content="https://ladysmithdays.com/images/ladysmith-days-oglarge.png"
-        />
+        /> */}
         <Meta />
         <Links />
       </head>
