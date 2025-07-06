@@ -11,6 +11,7 @@ import SectionSocialContact from '~/components/SectionSocialContact'
 import TimerClock from '~/components/TimerClock'
 import { HomepageSponsors } from '~/components/HomepageSponsors'
 import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
+import { SectionSchedule } from '~/components/SectionSchedule'
 
 export const meta: MetaFunction = () => {
   return [
@@ -132,10 +133,10 @@ export default function Index() {
               3. The gratitude (TBD)
              */}
 
-        {/* <SectionSchedule /> */}
+        <SectionSchedule />
         {/* <HomepageSponsors2 /> */}
 
-        <SectionOurPlan />
+        {/* <SectionOurPlan /> */}
 
         <SectionSocialContact />
       </div>

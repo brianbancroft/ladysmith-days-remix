@@ -6,7 +6,7 @@ module.exports = {
     '@remix-run/eslint-config/node',
     'prettier',
   ],
-  plugins: ['simple-import-sort'],
+  // plugins: ['simple-import-sort'],
   rules: {
     '@typescript-eslint/consistent-type-imports': [
       'warn',

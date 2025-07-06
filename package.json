@@ -1,6 +1,5 @@
 {
-  "name": "remix-vite-template",
-  "version": "1.5.2",
+  "name": "Ladysmith Days App",
   "private": true,
   "sideEffects": false,
   "type": "module",
