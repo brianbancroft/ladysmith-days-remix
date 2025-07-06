@@ -25,7 +25,7 @@ function Nav() {
         id="navLinks-desktop"
         className={classNames(
           'text-blue hidden grid-cols-4 gap-x-6 rounded-r-full border-2 border-blue-400 bg-white px-8 py-2 capitalize text-blue-700 underline transition-all duration-700 md:flex',
-          visible ? 'ml-12' : '-ml-[50vw]',
+          visible ? 'ml-12' : '-ml-[80vw]',
         )}
       >
         <Link to="/" className="font-medium uppercase">
