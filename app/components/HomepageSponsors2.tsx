@@ -10,12 +10,12 @@ export function HomepageSponsors2() {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="sponsor-element sponsor-link mt-4 h-3/4 bg-gray-200 p-4"
+          className="sponsor-element sponsor-link mt-4 h-3/4 bg-gray-300 p-4"
         >
           <div
             className={classNames(
               'h-full w-full justify-center  bg-contain bg-center bg-no-repeat px-12 py-6 md:flex ',
-              `bg-sponsor-fmi`,
+              `bg-sponsor-bayview`,
             )}
           ></div>
         </a>
@@ -24,7 +24,7 @@ export function HomepageSponsors2() {
           href="https://www.midislandco-op.crs/sites/midisland/"
           target="_blank"
           rel="noopener noreferrer"
-          className="sponsor-element sponsor-link  bg-gray-200 p-2 px-4"
+          className="sponsor-element sponsor-link  bg-gray-300 p-2 px-4"
         >
           <div
             className={classNames(
@@ -37,7 +37,7 @@ export function HomepageSponsors2() {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className=" sponsor-element sponsor-link mt-4 h-3/4 bg-gray-200 p-4"
+          className=" sponsor-element sponsor-link mt-4 h-3/4 bg-gray-300 p-4"
         >
           <div
             className={classNames(

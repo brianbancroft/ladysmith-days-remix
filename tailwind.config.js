@@ -47,7 +47,7 @@ export default {
         'sponsor-homepage-3': "url('/backgrounds/sponsor-homepage-3.png')",
         'sponsor-homepage-4':
           "url('/backgrounds/sponsor-sponsor-countrygrocer.png')",
-        'sponsor-homepage-5': "url('/backgrounds/sponsor-coop-65.jpg')",
+        'sponsor-homepage-5': "url('/backgrounds/sponsor-sponsor-coop.png')",
         'sponsor-homepage-6':
           "url('/backgrounds/sponsor-sponsor-pharmasave.png')",
         'sponsor-vendor-1': "url('/backgrounds/sponsor-vendor-1.png')",
