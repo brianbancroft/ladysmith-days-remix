@@ -91,30 +91,30 @@ export function SectionSchedule() {
           <div className="-rotate-2 bg-ld-light-blue p-1">
             <div className="rotate-1 bg-blue-700 p-2">
               <div className="transform bg-ld-yellow p-6 shadow-lg">
-                <h3 className="mb-2 text-2xl font-bold text-ld-dark-blue">
+                <h3 className="mb-4 text-2xl font-bold text-ld-dark-blue">
                   <span className="font-heading text-3xl">
                     BANDS ON THE BEACH{' '}
                   </span>
-                  | STARTS AT NOON
+                  | SUNDAY
                 </h3>
+                
                 <p className="mb-2 text-lg font-light text-ld-purple">
                   FEATURING
                 </p>
-                <ul className="mb-4 space-y-1 text-xl font-semibold text-ld-purple">
+                <ul className="mb-4 space-y-1 text-lg font-semibold text-ld-purple">
                   <li>
-                    PEACE, LOVE AND JOY • LEE WORDEN • LATITUD 0° TROPICAL DUO
+                    LEE WORDEN <span className="text-ld-dark-blue text-base">11:00</span> • PEACE, LOVE AND JOY <span className="text-ld-dark-blue text-base">11:45</span> • SARAH LEO <span className="text-ld-dark-blue text-base">12:30</span>
                   </li>
                   <li>
-                    SARAH LEO • DIAMOND DAWGS • JOHNNY RIGHTEOUS • SOL BLUE
-                    VIBES
+                    SOL BLUE VIBES <span className="text-ld-dark-blue text-base">1:15</span> • LATITUD 0° TROPICAL DUO <span className="text-ld-dark-blue text-base">2:00</span> • DIAMOND DAWGS <span className="text-ld-dark-blue text-base">2:45</span>
                   </li>
-                  <li>COVER GIRL • BRYCE ALLAN</li>
+                  <li>JOHNNY RIGHTEOUS <span className="text-ld-dark-blue text-base">3:45</span> • ANDY MCCORMACK <span className="text-ld-dark-blue text-base">4:30</span> • COVER GIRL <span className="text-ld-dark-blue text-base">5:15</span> • BRYCE ALLAN <span className="text-ld-dark-blue text-base">6:30</span></li>
                 </ul>
                 <p className="my-3 text-lg font-light text-blue-600">
-                  CITIZEN OF THE YEAR PRESENTATION
+                  CITIZEN OF THE YEAR PRESENTATION | 7:45 PM
                 </p>
                 <p className="mb-3 text-2xl font-bold text-ld-purple">
-                  <span className="text-lg font-light">AND</span> SUNSET STRIP
+                  <span className="text-lg font-light">AND</span> SUNSET STRIP | 8:00 PM
                 </p>
                 <p className="my-1 text-2xl font-bold text-blue-600">
                   FIREWORKS STARTING AT 10 PM
