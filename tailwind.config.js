@@ -121,6 +121,9 @@ export default {
           "url('/backgrounds/sponsor-sponsor-saltair-marine.png')",
         'sponsor-save-on-foods':
           "url('/backgrounds/sponsor-sponsor-saveonfoods.png')",
+        'sponsor-orcadental':
+          "url('/backgrounds/sponsor-sponsor-orcadental.png')",
+        'sponsor-sealeags': "url('/backgrounds/sponsor-sponsor-sealegs.png')",
         'sponsor-spyder-graphix':
           "url('/backgrounds/sponsor-sponsor-spydergraphix.png')",
         'sponsor-yum-yum': "url('/backgrounds/sponsor-sponsor-yumyum.png')",
