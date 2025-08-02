@@ -103,10 +103,10 @@ export function SectionSchedule() {
                 </p>
                 <ul className="mb-4 space-y-1 text-lg font-semibold text-ld-purple">
                   <li>
-                    LEE WORDEN <span className="text-ld-dark-blue text-base">11:00</span> • PEACE, LOVE AND JOY <span className="text-ld-dark-blue text-base">11:45</span> • SARAH LEO <span className="text-ld-dark-blue text-base">12:30</span>
+                    LEE WORDEN <span className="text-ld-dark-blue text-base">11:00</span> • PEACE, LOVE AND JOY <span className="text-ld-dark-blue text-base">11:45</span> • LATITUD 0° TROPICAL DUO <span className="text-ld-dark-blue text-base">12:30</span>
                   </li>
                   <li>
-                    SOL BLUE VIBES <span className="text-ld-dark-blue text-base">1:15</span> • LATITUD 0° TROPICAL DUO <span className="text-ld-dark-blue text-base">2:00</span> • DIAMOND DAWGS <span className="text-ld-dark-blue text-base">2:45</span>
+                    SOL BLUE VIBES <span className="text-ld-dark-blue text-base">1:15</span> • SARAH LEO <span className="text-ld-dark-blue text-base">2:00</span> • DIAMOND DAWGS <span className="text-ld-dark-blue text-base">2:45</span>
                   </li>
                   <li>JOHNNY RIGHTEOUS <span className="text-ld-dark-blue text-base">3:45</span> • ANDY MCCORMACK <span className="text-ld-dark-blue text-base">4:30</span> • COVER GIRL <span className="text-ld-dark-blue text-base">5:15</span> • BRYCE ALLAN <span className="text-ld-dark-blue text-base">6:30</span></li>
                 </ul>
