@@ -5,7 +5,7 @@ import type { MetaFunction } from '@remix-run/node'
 import { Link, useLocation } from '@remix-run/react'
 import logo from '~/assets/ladysmith-days-logo.png'
 import ScrollDownIndicator from '~/components/ScrollDownIndicator'
-// import SectionEventSummary from '~/components/SectionEventSummary'
+import SectionEventSummary from '~/components/SectionEventSummary'
 import SectionOurPlan from '~/components/SectionOurPlan'
 import SectionSocialContact from '~/components/SectionSocialContact'
 import TimerClock from '~/components/TimerClock'
@@ -100,7 +100,7 @@ export default function Index() {
 
             <TimerClock />
             <h3 className="fade-in-delay mb-4 font-heading text-xl font-light italic opacity-0">
-              August 2-3, 2025
+              August 1-2, 2026
             </h3>
           </div>
           <div className="invisible relative bottom-5 md:visible">
@@ -108,7 +108,7 @@ export default function Index() {
           </div>
         </div>
 
-        {/* <SectionEventSummary eventOver /> */}
+        <SectionEventSummary />
         <nav className="flex justify-evenly pb-4 pt-6 md:flex-row">
           <Link
             to="/volunteer"
@@ -133,10 +133,10 @@ export default function Index() {
               3. The gratitude (TBD)
              */}
 
-        <SectionSchedule />
+        {/* <SectionSchedule /> */}
         {/* <HomepageSponsors2 /> */}
 
-        {/* <SectionOurPlan /> */}
+        <SectionOurPlan />
 
         <SectionSocialContact />
       </div>

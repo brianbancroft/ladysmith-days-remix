@@ -5,7 +5,7 @@ import LinkVendorDownload from '~/components/LinkVendorDownload'
 import PageJumbotron from '~/components/PageJumbotron'
 import { sendEmail } from '~/server/sendEmail.server'
 
-const merchandiseVendorsAvailable = true
+const merchandiseVendorsAvailable = false
 const foodVendorsAvailable = false
 
 export const meta: MetaFunction = () => {

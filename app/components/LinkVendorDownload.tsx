@@ -18,6 +18,30 @@ function LinkVendorDownload(props: Props) {
       </a>
     )
 
+  const today = new Date()
+  const currentMonth = today.getMonth() + 1 // JavaScript months are 0-indexed
+  const notAcceptingSubmissions = currentMonth >= 8 && currentMonth <= 11 // August to November
+
+  const unavailable = soldOut || notAcceptingSubmissions
+
+  const DownloadIndicator = () => {
+    if (notAcceptingSubmissions) {
+      return (
+        <span className="group-hover:text-bold italic text-gray-600 group-hover:text-red-600 group-hover:underline">
+          Submissions opening in December
+        </span>
+      )
+    }
+    if (soldOut) {
+      return (
+        <span className="group-hover:text-bold italic text-gray-600 group-hover:text-red-600 group-hover:underline">
+          Booked for {new Date().getFullYear()}
+        </span>
+      )
+    }
+    return <DownloadIcon />
+  }
+
   return (
     <LinkWrapper>
       <div
@@ -37,12 +61,12 @@ function LinkVendorDownload(props: Props) {
                   flex-col justify-end
                   bg-white
                   md:h-48
-                  ${soldOut ? 'bg-opacity-40' : 'bg-opacity-20'}
+                  ${unavailable ? 'bg-opacity-40' : 'bg-opacity-20'}
                   bg-opacity-30
                   transition
                   duration-300
                   ease-in-out
-                  ${soldOut ? 'hover:bg-opacity-80' : 'hover:bg-opacity-0'}
+                  ${unavailable ? 'hover:bg-opacity-80' : 'hover:bg-opacity-0'}
                 `}
         >
           <div
@@ -60,13 +84,7 @@ function LinkVendorDownload(props: Props) {
             <p className="px-4 py-2 text-xl font-bold">{label}</p>
 
             <p>
-              {soldOut ? (
-                <span className="group-hover:text-bold italic text-gray-600 group-hover:text-red-600 group-hover:underline">
-                  Booked for {new Date().getFullYear()}
-                </span>
-              ) : (
-                <DownloadIcon />
-              )}
+              <DownloadIndicator />
             </p>
           </div>
         </div>

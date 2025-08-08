@@ -10,13 +10,19 @@ function SectionOurPlan() {
         <h2 className="my-3 text-3xl font-semibold">Our Plan</h2>
         <p className="my-3 text-lg lg:text-xl">
           The Ladysmith Celebration Society is planning all facets of our event.
-          For 2025. This year we are planning for a two-day event at Transfer
+          For 2026. This year we are planning for a two-day event at Transfer
           Beach along with a Soap Box Derby in Downtown Ladysmith.
         </p>
 
         <p className="my-3 text-lg lg:text-xl">
           On Sunday night, we will be having a concert and fireworks at Transfer
           Beach like last year, and we expect it to be a blast.
+        </p>
+
+        <p className="my-3 text-lg lg:text-xl">
+          But we haven't started planning for 2026 and beyond, and we might have
+          something to make 2026 even better. But to make it a success, we need
+          your help.
         </p>
       </div>
       <div className="text-gray-800">
